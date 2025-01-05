@@ -1,4 +1,4 @@
-package utils;
+package org.maodou.utils;
 
 import java.util.*;
 import java.util.function.BiConsumer;
