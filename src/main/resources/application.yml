@@ -5,3 +5,10 @@ spring:
     user:
       name: aa
       password: 1
+
+# DataSource Config
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/maodou_admin?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 123456

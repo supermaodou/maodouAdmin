@@ -1,9 +1,9 @@
 package org.maodou.controller;
 
 import org.maodou.domain.Result;
-import org.maodou.domain.User;
+import org.maodou.entity.SysUser;
 import org.maodou.exception.CustomException;
-import org.maodou.service.UserService;
+import org.maodou.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,12 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class IndexController {
 
     @Autowired
-    private UserService userService;
+    private SysUserService sysUserService;
 
     @RequestMapping("/hello")
     @ResponseBody
     public Result<String> hello() {
-        userService.save(new User());
+        sysUserService.save(new SysUser());
         return Result.success("hello");
     }
 
