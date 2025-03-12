@@ -5,10 +5,10 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.1</version>
+		<version>3.3.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>org.maodou</groupId>
+	<groupId>com.maodou</groupId>
 	<artifactId>maodouAdmin</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>maodouAdmin</name>
@@ -51,10 +51,10 @@
 			<scope>test</scope>
 		</dependency>
 		<!--security-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-security</artifactId>-->
+<!--		</dependency>-->
 		<!--log4j-->
 		<dependency>
 			<groupId>log4j</groupId>

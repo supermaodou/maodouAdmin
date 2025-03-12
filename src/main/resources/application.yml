@@ -21,11 +21,15 @@ springdoc:
     tags-sorter: alpha
     operations-sorter: alpha
   api-docs:
-    path: /v3/api-docs
-  group-configs:
-    - group: 'default'
+    path: /v3/api-docs  #swagger后端请求地址
+    enabled: true   #是否开启文档功能
+  group-configs: #分组配置,可配置多个分组
+    - group: 'default'             #分组名称
+      paths-to-match: '/**'        #配置需要匹配的路径
+      packages-to-scan: com.maodou.controller
+    - group: 'admin-api'
       paths-to-match: '/**'
-      packages-to-scan: org.maodou.controller
+      packages-to-scan: com.maodou.controller
 # knife4j的增强配置，不需要增强可以不配
 knife4j:
   enable: true
