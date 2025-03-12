@@ -25,13 +25,13 @@ public class BaseEntity implements Serializable {
     /**
      * 搜索值
      */
-    @JsonIgnore
-    private String searchValue;
+//    @JsonIgnore
+//    private String searchValue;
 
     /**
      * 创建者
      */
-    private String createBy;
+//    private String createBy;
 
     /**
      * 创建时间
@@ -42,7 +42,7 @@ public class BaseEntity implements Serializable {
     /**
      * 更新者
      */
-    private String updateBy;
+//    private String updateBy;
 
     /**
      * 更新时间
@@ -58,24 +58,24 @@ public class BaseEntity implements Serializable {
     /**
      * 请求参数
      */
-    @JsonInclude(JsonInclude.Include.NON_EMPTY)
-    private Map<String, Object> params;
+//    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+//    private Map<String, Object> params;
 
-    public String getSearchValue() {
-        return searchValue;
-    }
+//    public String getSearchValue() {
+//        return searchValue;
+//    }
 
-    public String getCreateBy() {
-        return createBy;
-    }
+//    public String getCreateBy() {
+//        return createBy;
+//    }
 
     public Date getCreateTime() {
         return createTime;
     }
 
-    public String getUpdateBy() {
-        return updateBy;
-    }
+//    public String getUpdateBy() {
+//        return updateBy;
+//    }
 
     public Date getUpdateTime() {
         return updateTime;
@@ -85,11 +85,11 @@ public class BaseEntity implements Serializable {
         return remark;
     }
 
-    public Map<String, Object> getParams() {
-        if (params == null) {
-            params = new HashMap<>();
-        }
-        return params;
-    }
+//    public Map<String, Object> getParams() {
+//        if (params == null) {
+//            params = new HashMap<>();
+//        }
+//        return params;
+//    }
 
 }

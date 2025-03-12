@@ -26,7 +26,7 @@ public class SysSysUserServiceImpl implements SysUserService {
     @Override
     public List<SysUser> list() {
         logger.info("list user");
-        return sysUserMapper.selectByIds(null);
+        return sysUserMapper.selectList(null);
     }
 
     @Override

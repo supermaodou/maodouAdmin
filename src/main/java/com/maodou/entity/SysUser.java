@@ -1,6 +1,8 @@
 package com.maodou.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.Setter;
@@ -32,28 +34,30 @@ public class SysUser extends BaseEntity implements Serializable {
     /**
      * 部门ID
      */
-    private Long deptId;
+//    private Long deptId;
 
     /**
      * 用户账号
      */
     @Schema(description = "用户名")
-    private String userName;
+    @TableField("user_name")
+    private String username;
 
     /**
      * 用户昵称
      */
-    private String nickName;
+    @TableField("nick_name")
+    private String nickname;
 
     /**
      * 用户邮箱
      */
-    private String email;
+//    private String email;
 
     /**
      * 手机号码
      */
-    private String phonenumber;
+//    private String phonenumber;
 
     /**
      * 用户性别
@@ -84,32 +88,32 @@ public class SysUser extends BaseEntity implements Serializable {
     /**
      * 最后登录IP
      */
-    private String loginIp;
+//    private String loginIp;
 
     /**
      * 最后登录时间
      */
-    private Date loginDate;
+//    private Date loginDate;
 
     /**
      * 角色对象
      */
-    private List<SysRole> roles;
+//    private List<SysRole> roles;
 
     /**
      * 角色组
      */
-    private Long[] roleIds;
+//    private Long[] roleIds;
 
     /**
      * 岗位组
      */
-    private Long[] postIds;
+//    private Long[] postIds;
 
     /**
      * 角色ID
      */
-    private Long roleId;
+//    private Long roleId;
 
     public SysUser() {
 
