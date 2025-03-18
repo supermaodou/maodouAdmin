@@ -14,4 +14,9 @@ public interface SysUserService {
 
     int delete(Long id);
 
+    boolean login(String username, String password);
+
+    void logout();
+
+    boolean register(String username, String password);
 }

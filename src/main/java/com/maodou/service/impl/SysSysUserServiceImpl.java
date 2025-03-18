@@ -1,5 +1,6 @@
 package com.maodou.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.maodou.entity.SysUser;
 import com.maodou.mapper.SysUserMapper;
 import com.maodou.service.SysUserService;
@@ -45,5 +46,29 @@ public class SysSysUserServiceImpl implements SysUserService {
     public int delete(Long id) {
         logger.info("delete user");
         return sysUserMapper.deleteById(id);
+    }
+
+    @Override
+    public boolean login(String username, String password) {
+        SysUser sysUser = sysUserMapper.selectOne(new QueryWrapper<SysUser>().eq("username", username).eq("password", password));
+        return sysUser != null;
+    }
+
+    @Override
+    public boolean register(String username, String password) {
+        SysUser sysUser = sysUserMapper.selectOne(new QueryWrapper<SysUser>().eq("username", username));
+        if (sysUser == null) {
+            sysUser = new SysUser();
+            sysUser.setUsername(username);
+            sysUser.setPassword(password);
+            sysUserMapper.insert(sysUser);
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public void logout() {
+        // 退出登录
     }
 }
