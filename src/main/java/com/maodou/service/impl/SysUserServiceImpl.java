@@ -4,23 +4,22 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.maodou.entity.SysUser;
 import com.maodou.mapper.SysUserMapper;
 import com.maodou.service.SysUserService;
-import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.logging.Logger;
 
 @Service
-public class SysSysUserServiceImpl implements SysUserService {
+public class SysUserServiceImpl implements SysUserService {
 
-    static final Logger logger = Logger.getLogger(SysSysUserServiceImpl.class.getName());
+    static final Logger logger = Logger.getLogger(SysUserServiceImpl.class.getName());
 
 //    @Resource
 //    private SysUserMapper sysUserMapper;
 
     private final SysUserMapper sysUserMapper;
 
-    public SysSysUserServiceImpl(SysUserMapper sysUserMapper) {
+    public SysUserServiceImpl(SysUserMapper sysUserMapper) {
         this.sysUserMapper = sysUserMapper;
     }
 
