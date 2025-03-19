@@ -1,9 +1,11 @@
 package com.maodou.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Getter;
 import lombok.Setter;
 import com.maodou.domain.BaseEntity;
+import lombok.ToString;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -17,6 +19,8 @@ import java.util.Set;
  */
 @Setter
 @Getter
+@ToString
+@TableName("sys_role")
 public class SysRole extends BaseEntity implements Serializable {
 
     @Serial
@@ -89,19 +93,4 @@ public class SysRole extends BaseEntity implements Serializable {
         return roleId != null && 1L == roleId;
     }
 
-    @Override
-    public String toString() {
-        return "SysRole{" +
-                "roleId=" + roleId +
-                ", roleName='" + roleName + '\'' +
-                ", roleKey='" + roleKey + '\'' +
-                ", roleSort=" + roleSort +
-                ", dataScope='" + dataScope + '\'' +
-                ", status='" + status + '\'' +
-                ", delFlag='" + delFlag + '\'' +
-                ", flag=" + flag +
-                ", menuIds=" + Arrays.toString(menuIds) +
-                ", permissions=" + permissions +
-                '}';
-    }
 }

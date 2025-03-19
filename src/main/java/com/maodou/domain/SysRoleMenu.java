@@ -1,10 +1,21 @@
 package com.maodou.domain;
 
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
 /**
  * 角色和菜单关联 sys_role_menu
  *
  * @author ruoyi
  */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@TableName("sys_role_menu")
 public class SysRoleMenu {
     /**
      * 角色ID
@@ -16,27 +27,4 @@ public class SysRoleMenu {
      */
     private Long menuId;
 
-    public Long getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(Long roleId) {
-        this.roleId = roleId;
-    }
-
-    public Long getMenuId() {
-        return menuId;
-    }
-
-    public void setMenuId(Long menuId) {
-        this.menuId = menuId;
-    }
-
-    @Override
-    public String toString() {
-        return "SysRoleMenu{" +
-                "roleId=" + roleId +
-                ", menuId=" + menuId +
-                '}';
-    }
 }

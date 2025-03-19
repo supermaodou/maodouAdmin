@@ -15,11 +15,9 @@ public class SysMenuServiceImpl implements SysMenuService {
     static final Logger logger = Logger.getLogger(SysMenuServiceImpl.class.getName());
 
     private final SysMenuMapper sysMenuMapper;
-    private final SysMenuService sysMenuService;
 
-    public SysMenuServiceImpl(SysMenuMapper sysMenuMapper, SysMenuService sysMenuService) {
+    public SysMenuServiceImpl(SysMenuMapper sysMenuMapper) {
         this.sysMenuMapper = sysMenuMapper;
-        this.sysMenuService = sysMenuService;
     }
 
     @Override

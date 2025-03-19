@@ -1,9 +1,12 @@
 package com.maodou.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Getter;
 import lombok.Setter;
 import com.maodou.domain.BaseEntity;
+import lombok.ToString;
+
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -16,6 +19,8 @@ import java.util.List;
  */
 @Setter
 @Getter
+@ToString
+@TableName("sys_menu")
 public class SysMenu extends BaseEntity implements Serializable {
 
     @Serial
@@ -107,26 +112,4 @@ public class SysMenu extends BaseEntity implements Serializable {
      */
     private List<SysMenu> children = new ArrayList<SysMenu>();
 
-    @Override
-    public String toString() {
-        return "SysMenu{" +
-                "menuId=" + menuId +
-                ", menuName='" + menuName + '\'' +
-                ", parentName='" + parentName + '\'' +
-                ", parentId=" + parentId +
-                ", orderNum=" + orderNum +
-                ", path='" + path + '\'' +
-                ", component='" + component + '\'' +
-                ", query='" + query + '\'' +
-                ", routeName='" + routeName + '\'' +
-                ", isFrame='" + isFrame + '\'' +
-                ", isCache='" + isCache + '\'' +
-                ", menuType='" + menuType + '\'' +
-                ", visible='" + visible + '\'' +
-                ", status='" + status + '\'' +
-                ", perms='" + perms + '\'' +
-                ", icon='" + icon + '\'' +
-                ", children=" + children +
-                '}';
-    }
 }

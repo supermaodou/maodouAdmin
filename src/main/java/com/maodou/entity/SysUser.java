@@ -7,6 +7,8 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.Setter;
 import com.maodou.domain.BaseEntity;
+import lombok.ToString;
+
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
@@ -20,6 +22,8 @@ import java.util.List;
 @Setter
 @Getter
 @Schema(description = "用户对象")
+@ToString
+@TableName("sys_user")
 public class SysUser extends BaseEntity implements Serializable {
 
     @Serial
